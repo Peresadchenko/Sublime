@@ -1,0 +1,31 @@
+body {
+  font-size: 14px;
+  line-height: 16px;
+  color: #595959;
+  @extend %Roboto-400;
+  background-color: #161616;
+}
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title-span {
+  color: $span;
+}
+
+.title-span2 {
+  color: #000;
+}
+
+.text{
+  font-weight: 300;
+}
+
+.content-text {
+  padding-bottom: 20px;
+  font-size: 16px;
+  color: #000;
+  @extend %Roboto-Italic-400;
+}
