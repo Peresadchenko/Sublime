@@ -116,7 +116,7 @@
     color: #000;
   }
   &__content {
-    width: 625px;
+    width: 640px;
   }
 
   &__content-text {
@@ -189,6 +189,7 @@
   }
   &__items {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     padding-bottom: 70px;
   }
@@ -235,7 +236,7 @@
   }
   &__text-title {
     font-size: 28px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     font-weight: 300;
     color: #1d1d1d;
     span {
@@ -245,18 +246,19 @@
 }
 
 .provided {
+  position: relative;
   &__wrapper {
     background-color: #5e395a;
   }
   &__img {
-    min-width: 1200px;
+    max-width: 1200px;
     position: absolute;
     z-index: -1;
   }
-  &__title{
+  &__title {
     padding: 40px 0 0 50px;
   }
-  &__title-text{
+  &__title-text {
     color: #fff;
     font-size: 28px;
     font-weight: 300;
@@ -265,26 +267,126 @@
       font-size: 42px;
     }
   }
-  &__items{
+  &__items {
     display: flex;
     justify-content: flex-end;
-    margin-left: 410px;
+    margin-left: 111px;
     margin-right: 100px;
     flex-wrap: wrap;
-  }  
-  &__item{
+  }
+  &__item {
     width: 240px;
     margin-right: 90px;
-    margin-bottom: 70px;
-    color: #fff;    
+    margin-bottom: 65px;
+    color: #fff;
   }
-  &__item-title{
+  &__item-title {
     font-size: 18px;
     margin-bottom: 25px;
     font-weight: 400;
   }
-  &__item-text{
+  &__item-text {
     font-size: 11px;
     font-weight: 300;
+  }
+}
+
+.team {
+  &__wrapper {
+    background-color: #fff;
+    display: flex;
+  }
+  &__title {
+    padding: 100px 0 0 50px;
+    margin-right: 120px;
+  }
+  &__title-text {
+    font-size: 28px;
+    color: #000;
+    span {
+      font-size: 42px;
+    }
+  }
+  &__content {
+    padding-top: 85px;
+  }
+  &__content-text {
+    width: 670px;
+  }
+  &__items {
+    display: flex;
+    text-align: center;
+    margin-top: 35px;
+  }
+  &__item {
+    margin-right: 20px;
+    margin-bottom: 150px;
+  }
+  &__item-img {
+    margin-bottom: 15px;
+  }
+  &__item-name {
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+  }
+  &__item-position {
+    font-size: 16px;
+    font-weight: 300;
+  }
+}
+
+.testimonials {
+  &__wrapper {
+    background-color: #000;
+  }
+  &__title {
+    padding: 55px 0 30px 50px;
+  }
+  &__title-text {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    span {
+      font-size: 42px;
+    }
+  }
+  &__content {
+    display: flex;
+    padding-bottom: 110px;
+  }
+  &__content-text {
+    width: 750px;
+    padding-left: 90px;
+    .content-text {
+      color: #fff;
+      font-size: 16px;
+      @extend %Roboto-Italic-400;
+    }
+    .text {
+      color: #fff;
+      font-size: 14px;
+    }
+  }
+  &__content-person {
+    margin-left: 80px;
+    text-align: center;
+  }
+  .content-person__img {
+    border: 3px solid $span;
+    border-radius: 60px;
+    margin-top: -50px;
+    margin-bottom: 15px;
+  }
+  .content-person__item-name {
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+  }
+  .content-person__item-position {
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
   }
 }
