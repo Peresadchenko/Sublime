@@ -2,86 +2,75 @@
 @import "fonts";
 @import "reset";
 @import "global";
-@import "media";
+
 
 .header {
-  background: top center no-repeat url(../images/header-fon.jpg);
-  width: 100%;
   height: 1086px;
-  &__logo {
+  width: 100%;
+  background: top center no-repeat url(../images/header-fon.jpg);
+  &__top {
     padding-left: 45px;
-    .header__logo-title {
-      padding-top: 80px;
-      .logo-title {
-        font-size: 202px;
-        line-height: 200px;
-        color: $title;
-        @extend %Roboto-700;
-        span {
-          color: $span;
-        }
-      }
+  }
+  &__top-text {
+    width: 405px;
+    margin-bottom: 30px;
+    .top-text {
+      font-size: 18px;
+      line-height: 23px;
+      font-weight: 300;
+      color: $title;
     }
-    .header__logo-text {
-      width: 405px;
-      margin-bottom: 30px;
-      .logo-text {
-        font-size: 18px;
-        line-height: 23px;
-        font-weight: 300;
-        color: $title;
-      }
+  }
+  &__top-link {
+    margin-bottom: 65px;
+    .top-link {
+      font-size: 18px;
+      line-height: 18px;
+      color: $span;
+      transition: all 0.3s;
     }
-    .header__logo-link {
-      margin-bottom: 65px;
-      .logo-link {
-        font-size: 18px;
-        line-height: 18px;
-        color: $span;
-        transition: all 0.3s;
-      }
-      .logo-link:hover {
-        color: $title;
-        border-bottom: 1px solid $span;
-      }
+    .top-link:hover {
+      color: $title;
+      border-bottom: 1px solid $span;
     }
   }
 
   &__inner {
     background: top center no-repeat url("../images/inner-fon.jpg");
     padding-bottom: 407px;
-    .header__inner-fon {
-      padding: 0 15px 0 15px;
-      position: absolute;
-      z-index: -1;
+  }
+  &__inner-fon {
+    padding: 0 15px 0 15px;
+    position: absolute;
+    z-index: -1;
+  }
+  &__inner-title {
+    width: 480px;
+    font-size: 35px;
+    line-height: 45px;
+    color: $title;
+    @extend %Roboto-700;
+    padding: 70px 0px 60px 45px;
+  }
+
+  .menu {
+    padding-left: 15px;
+    &__list {
+      display: flex;
     }
-    .header__inner-title {
-      width: 480px;
-      font-size: 35px;
-      line-height: 45px;
+    &__list-item {
+      padding-left: 30px;
+    }
+    &__list-link {
+      font-size: 18px;
+      line-height: 18px;
+      color: $span;
+      padding: 0 3px;
+      transition: all 0.3s;
+    }
+    &__list-link:hover {
       color: $title;
-      @extend %Roboto-700;
-      padding: 70px 0px 60px 45px;
-    }
-    .menu {
-      padding-left: 15px;
-      &__list {
-        display: flex;
-      }
-      &__list-item {
-        padding-left: 30px;
-      }
-      &__list-link {
-        font-size: 18px;
-        line-height: 18px;
-        color: $span;
-        padding: 0 3px;
-        transition: all 0.3s;
-      }
-      &__list-link:hover {
-        color: $title;
-        border-bottom: 1px solid $span;
-      }
+      border-bottom: 1px solid $span;
     }
   }
 }
@@ -112,13 +101,12 @@
     color: #000;
   }
   &__title-text::after {
-    content: "______________";
-    width: 135px;
+    content: "";
+    border-bottom: 1px solid #c5c5c5;
+    width: 105px;
     position: absolute;
     left: 105px;
-    bottom: -25px;
-    color: #c5c5c5;
-    font-size: 16px;
+    bottom: -10px;
   }
   &__content {
     width: 640px;
@@ -176,13 +164,12 @@
     }
   }
   &__title-text::after {
-    content: "__________________";
-    width: 135px;
+    content: "";
+    border-bottom: 1px solid #c5c5c5;
+    width: 130px;
     position: absolute;
     left: 105px;
-    bottom: -15px;
-    color: #c5c5c5;
-    font-size: 16px;
+    bottom: 7px;    
   }
   &__filter-btn {
     padding-left: 85px;
@@ -240,17 +227,16 @@
     }
   }
   &__title-text::after {
-    content: "__________________";
-    width: 135px;
+    content: "";
+    border-bottom: 1px solid #c5c5c5;
+    width: 130px;
     position: absolute;
     left: 105px;
-    bottom: -15px;
-    color: #c5c5c5;
-    font-size: 16px;
+    bottom: 10px;
   }
   &__content {
     margin-bottom: 45px;
-    padding: 0 65px 0 85px;
+    padding: 0 65px 0 85px;    
   }
   &__items {
     padding-bottom: 65px;
@@ -259,15 +245,23 @@
     display: flex;
     justify-content: center;
   }
+  &__img{
+    width: 100%;
+    max-width: 430px;
+  }
   &__item-box {
     max-width: 430px;
-    padding: 45px 35px 0 35px;
-    margin-bottom: 5px;
+    padding: 20px 20px 0 20px;
+    margin-bottom: 10px;
+    .content-text {
+      line-height: 1.3;
+    }
   }
   &__text-title {
     font-size: 28px;
-    margin-bottom: 35px;
+    margin-bottom: 10px;
     font-weight: 300;
+    line-height: 1.3;
     color: #1d1d1d;
     span {
       font-size: 42px;
@@ -275,11 +269,11 @@
   }
 }
 
-.provided {  
+.provided {
   &__wrapper {
     background: top center no-repeat url("../images/provided-fon.jpg");
     width: 100%;
-  } 
+  }
   &__title {
     padding: 40px 0 0 50px;
   }
@@ -294,13 +288,12 @@
     }
   }
   &__title-text::after {
-    content: "_________________";
-    width: 135px;
+    content: "";
+    border-bottom: 1px solid #fff;
+    width: 125px;
     position: absolute;
     left: 116px;
-    bottom: -15px;
-    color: #c5c5c5;
-    font-size: 16px;
+    bottom: 10px;
   }
   &__items {
     display: grid;
@@ -312,7 +305,7 @@
   &__item {
     width: 240px;
     margin-right: 70px;
-    margin-bottom: 65px;
+    margin-bottom: 38px;
     color: #fff;
   }
   &__item-title {
@@ -323,6 +316,7 @@
   &__item-text {
     font-size: 11px;
     font-weight: 300;
+    line-height: 1.3;
   }
 }
 
@@ -346,13 +340,12 @@
     }
   }
   &__title-text::after {
-    content: "____________";
-    width: 135px;
+    content: "";
+    border-bottom: 1px solid #c5c5c5;
+    width: 85px;
     position: absolute;
     left: 120px;
-    bottom: -15px;
-    color: #c5c5c5;
-    font-size: 16px;
+    bottom: 10px;
   }
   &__content {
     max-width: 680px;
@@ -404,13 +397,12 @@
     }
   }
   &__title-text::after {
-    content: "___________";
-    width: 135px;
+    content: "";
+    border-bottom: 1px solid #fff;
+    width: 83px;
     position: absolute;
-    left: 90px;
-    bottom: -15px;
-    color: #fff;
-    font-size: 16px;
+    left: 87px;
+    bottom: 10px;
   }
   &__content {
     display: flex;
@@ -471,12 +463,13 @@
     }
   }
   &__title-text::after {
-    content: "____________";
-    width: 135px;
+    content: "";
+    border-bottom: 1px solid #c5c5c5;
+    width: 85px;
     position: absolute;
     font-size: 16px;
     left: 0;
-    bottom: -15px;
+    bottom: 10px;
     color: #c5c5c5;
   }
   &__content {
@@ -488,7 +481,6 @@
     justify-content: space-between;
     margin-left: 30px;
     margin-top: -90px;
-    
   }
   &__content-links {
     margin-left: 10%;
@@ -516,7 +508,7 @@
     margin-bottom: 10px;
     transition: all 0.3s;
   }
-  .content-item__img:hover{
+  .content-item__img:hover {
     transform: scale(1.05);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
@@ -527,7 +519,7 @@
   }
   .content-item__link:hover {
     font-weight: 700;
-  }  
+  }
   .content-item__title-text {
     font-size: 16px;
     color: #000;
@@ -535,7 +527,7 @@
     margin-top: 25px;
     transition: all 0.3s;
   }
-  .content-item__title-text:hover{
+  .content-item__title-text:hover {
     color: $default;
   }
   .content-item__text {
@@ -551,12 +543,12 @@
     background: -15px 0px no-repeat url("../images/map.jpg");
     width: 100%;
     position: relative;
-  }  
+  }
   &__inner {
     background-color: #2046b3;
     height: 685px;
     width: 58%;
-  }  
+  }
   &__map-label {
     border: 3px solid #ffc600;
     width: 75px;
@@ -575,7 +567,7 @@
     @extend %Roboto-700;
   }
   &__title {
-    padding: 50px 0 0 100px;
+    padding: 45px 0 0 100px;
   }
   &__title-text {
     color: #fff;
@@ -591,13 +583,12 @@
     }
   }
   &__title-text::after {
-    content: "________________________";
-    width: 135px;
+    content: "";
+    border-bottom: 2px solid #c5c5c5;
+    width: 165px;
     position: absolute;
     left: 0;
-    bottom: -15px;
-    color: #c5c5c5;
-    font-size: 16px;
+    bottom: 10px;
   }
   &__form {
     max-width: 420px;
@@ -640,11 +631,11 @@
     color: #000;
     background-color: $span;
     border: none;
-    padding: 11px 38px;
+    padding: 5px 38px;
     cursor: pointer;
     @extend %Roboto-500;
     transition: all 0.2s;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
   &__btn:hover {
     transform: scale(1.1);
@@ -652,6 +643,7 @@
   }
   &__box {
     margin-left: 10%;
+    margin-bottom: 20px;
   }
   &__box-title {
     display: flex;
@@ -660,13 +652,14 @@
     font-size: 16px;
     color: #fff;
     font-weight: 500;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     margin-right: 15px;
   }
   &__text {
     font-size: 12px;
     color: #d6dbed;
     padding-right: 10px;
+    padding-top: 5px;
   }
   &__links {
     display: flex;
@@ -700,7 +693,7 @@
     margin-left: 25px;
   }
   &__nav-title {
-    margin-top: 120px;
+    margin-top: 60px;
     margin-bottom: 55px;
     font-size: 60px;
     color: #fff;
@@ -740,3 +733,5 @@
     color: $span;
   }
 }
+
+@import "media";
