@@ -1,6 +1,7 @@
 body {
   font-size: 14px;
   line-height: 16px;
+  line-height: 1.7;
   color: #595959;
   @extend %Roboto-400;
   background-color: #161616;
@@ -10,6 +11,19 @@ body {
   max-width: 1230px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.logo {
+  padding-top: 80px;
+  &__title {
+    font-size: 202px;
+    line-height: 200px;
+    color: $title;
+    @extend %Roboto-700;
+  }
+  &__title-span {
+    color: $span;
+  }
 }
 
 .title-span {
